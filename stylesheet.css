@@ -1,0 +1,5 @@
+.grid {
+    border: 1px;
+    border-color: pink;
+    display: grid;
+}
