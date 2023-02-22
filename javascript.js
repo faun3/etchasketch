@@ -1,5 +1,5 @@
 //create 16x16 grid of square divs
-let size = 16;
+let size = 10;
 const gridContainer = document.querySelector('.grid');
 const pixel = document.createElement('div');
 pixel.textContent = 'ab';
