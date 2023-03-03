@@ -12,7 +12,7 @@ function createBoard(size)
 
     for (let i = 0; i < size * size; i++){
         let square = document.createElement('div');
-        square.style.backgroundColor = 'blue';
+        square.style.backgroundColor = 'white';
         square.addEventListener('mouseover', () => {
             square.style.backgroundColor = 'black';
         });
