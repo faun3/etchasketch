@@ -18,6 +18,12 @@ function createBoard(size)
     }
 }
 
+const resizeButton = document.querySelector('button');
+resizeButton.addEventListener('click', () => {
+    let boardSize = prompt('What size should the new board be?');
+    createBoard(boardSize);
+});
+
 function resizeBoard(size)
 {
     createBoard(size);
