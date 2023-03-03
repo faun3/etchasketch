@@ -1,5 +1,6 @@
 function createBoard(size)
 {
+    let color='';
     if (size < 2 || size > 100){
         alert('Size must be between between [2; 100]!');
         return;
@@ -14,7 +15,8 @@ function createBoard(size)
         let square = document.createElement('div');
         square.style.backgroundColor = 'white';
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
+            color = colorGenerator();
+            square.style.backgroundColor = `${color}`;
         });
         board.insertAdjacentElement('beforeend', square);
     }
@@ -29,6 +31,14 @@ resizeButton.addEventListener('click', () => {
 function resizeBoard(size)
 {
     createBoard(size);
+}
+
+function colorGenerator()
+{
+    let colorString ='';
+    const colorNumber = Math.floor(Math.random() * 16777215).toString(16);
+    colorString = "#" + colorNumber;
+    return colorString;
 }
 
 createBoard(16);
