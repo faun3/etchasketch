@@ -15,8 +15,7 @@ function createBoard(size)
         let square = document.createElement('div');
         square.style.backgroundColor = 'white';
         square.addEventListener('mouseover', () => {
-            color = colorGenerator();
-            square.style.backgroundColor = `${color}`;
+            square.style.backgroundColor = `hsl(${Math.random() * 360} 100% 50%)`;
         });
         board.insertAdjacentElement('beforeend', square);
     }
@@ -31,14 +30,6 @@ resizeButton.addEventListener('click', () => {
 function resizeBoard(size)
 {
     createBoard(size);
-}
-
-function colorGenerator()
-{
-    let colorString ='';
-    const colorNumber = Math.floor(Math.random() * 16777215).toString(16);
-    colorString = "#" + colorNumber;
-    return colorString;
 }
 
 createBoard(16);
