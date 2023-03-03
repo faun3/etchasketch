@@ -1,5 +1,9 @@
 function createBoard(size)
 {
+    if (size < 2 || size > 100){
+        alert('Size must be between between [2; 100]!');
+        return;
+    } 
     const board = document.querySelector('.board');
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -17,5 +21,3 @@ function resizeBoard(size)
 }
 
 createBoard(10);
-resizeBoard(16);
-resizeBoard(10);
