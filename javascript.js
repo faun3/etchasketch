@@ -11,6 +11,9 @@ function createBoard(size)
     for (let i = 0; i < size * size; i++){
         let square = document.createElement('div');
         square.style.backgroundColor = 'blue';
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = 'black';
+        });
         board.insertAdjacentElement('beforeend', square);
     }
 }
@@ -20,4 +23,4 @@ function resizeBoard(size)
     createBoard(size);
 }
 
-createBoard(10);
+createBoard(16);
